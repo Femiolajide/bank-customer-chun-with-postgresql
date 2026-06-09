@@ -21,7 +21,7 @@ def load_data_to_postgresql() -> pd.DataFrame:
     """This ETL script loads Bank_Churn_Messy.xlsx to online postgresql servr"""
     import pandas as pd
     bank_churn_messy = pd.read_excel(
-        r"data\Bank_Churn_Messy.xlsx",sheet_name=None)
+        "data/Bank_Churn_Messy.xlsx",sheet_name=None)
     details = []
     for sht_name, df in bank_churn_messy.items():
         # column name transformation 
