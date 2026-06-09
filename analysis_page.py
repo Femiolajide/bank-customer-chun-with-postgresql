@@ -32,13 +32,13 @@ st.markdown("#### :blue[1. Data Setup]")
 with st.expander("__1.1 Data source__", expanded=False):
     st.markdown(w.data_source)
 with st.expander("__1.2 Data Dictionary__", expanded=False):
-    a = pd.read_csv(r"data\Bank_Churn_Data_Dictionary.csv")
+    a = pd.read_csv("data/Bank_Churn_Data_Dictionary.csv")
     a = a.rename(columns={"Field":"Field (source)"})
     a["Field (standardized)"] = a["Field (source)"].map(lambda x: clean_name(x))
     a = a[["Field (source)","Field (standardized)","Description"]]
-    b = pd.read_excel(r"data\Bank_Churn_Messy.xlsx",nrows=1)
-    c = pd.read_excel(r"data\Bank_Churn_Messy.xlsx",sheet_name=1,nrows=1)
-    sht_name = pd.ExcelFile(r"data\Bank_Churn_Messy.xlsx").sheet_names
+    b = pd.read_excel("data/Bank_Churn_Messy.xlsx",nrows=1)
+    c = pd.read_excel("data/Bank_Churn_Messy.xlsx",sheet_name=1,nrows=1)
+    sht_name = pd.ExcelFile("data/Bank_Churn_Messy.xlsx").sheet_names
     sht_name = [clean_name(x) for x in sht_name]
     st.write(f"#### :blue-badge[{sht_name[0]}]")
     st.table(a[a["Field (source)"].isin(b.columns)],hide_index=True)
