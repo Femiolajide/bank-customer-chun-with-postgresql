@@ -10,7 +10,7 @@ def get_con():
         password=db["psw"],
         host=db["host"],
         database=db["db_name"],
-        query={"sslmode":db["sslmode"]}
+        query={"sslmode":"require"}
         )
     # creating connection engine 
     con = create_engine(con_url,
