@@ -17,9 +17,8 @@ and :gray-badge[Account_Info], and each sheet is loaded into the remote PostgreS
 as a separate table through the Streamlit app and the ETL script designed for this repository.
 """
 etl = """
-This section performs the ETL step for the project. 
-[The ETL script](https://github.com/Femiolajide/bank-customer-chun-with-postgresql/blob/main/etl_script.py) 
-extracts raw data from :gray-badge[_Bank_Churn_Messy.xlsx_], 
+This section performs the ETL step for the project. The
+[ETL script](https://github.com/Femiolajide/bank-customer-chun-with-postgresql/blob/main/etl_script.py) extracts raw data from :gray-badge[_Bank_Churn_Messy.xlsx_], 
 standardises the table names and column names into :gray-badge[_snake_case_],
 and loads each sheet into the remote PostgreSQL database.
 The :gray-badge[_Customer_Info_] sheet is loaded as 
