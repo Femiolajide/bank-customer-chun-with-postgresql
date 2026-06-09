@@ -3,3 +3,4 @@ sqlalchemy
 streamlit
 openpyxl
 psycopg2-binary
+tabulate
