@@ -18,6 +18,7 @@ def clean_name(txt:str) -> str:
     return txt
 
 def load_data_to_postgresql() -> pd.DataFrame:
+    from db_hidden_connection import get_con
     """This ETL script loads Bank_Churn_Messy.xlsx to online postgresql servr"""
     import pandas as pd
     bank_churn_messy = pd.read_excel(
